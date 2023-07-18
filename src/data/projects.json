@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "personal-blog",
+    "title": "Blog Personal",
+    "tags": ["HTML", "CSS", "Javascript", "Tailwind", "React.js", "Next.js", "Strapi CMS"],
+    "description": "Este blog fue creado en Next.js y se utilizó Strapi CMS para la gestión de contenido. En lo que respecta a los estilos, se utilizó Tailwind. Se trata de una primera versión, la cuál es utilizada para toma de apuntes acerca de diferentes lenguajes, en formato de entrada de blog."
+  },
+  {
+    "slug": "banco-montserrat",
+    "title": "Banco Montserrat",
+    "tags": ["HTML", "CSS", "Javascript", "SASS"],
+    "description": "Banco Montserrat es un sitio estático desarrollado con Javascript Vanilla en el cual se incorporan funcionalidades de simulación como cambio de divisa, utilizando un API para tener el valor de dolar actualizado, plazo fijo y préstamos. Para los estilos se utiliza el preprocesador SASS."
+  },
+  {
+    "slug": "allungata",
+    "title": "Allungata Pizzería",
+    "tags": ["HTML", "CSS", "SASS"],
+    "description": "Allungata Pizzería es un sitio estático que consta de 5 secciones bien diferenciadas, basado en un diseño en Figma y desarrollado con el preprocesador SASS para brindarle estilos específicos a la web."
+  },
+ {
+    "slug": "valhalla-gym",
+    "title": "Valhalla GYM",
+    "tags": ["HTML", "CSS", "Javascript", "Tailwind"],
+    "description": "Valhalla GYM es una landing page sencilla, que brinda información básica y general de un gimnasio, se utilizó Tailwind para los estilos y Javascript para pequeñas animaciones y validaciones de formularios."
+  },
+  {
+    "slug": "web-portfolio",
+    "title": "Portfolio Web",
+    "tags": ["HTML", "CSS", "Javascript", "ChakraUI", "React.js", "Next.js"],
+    "description": "El portfolio web, es decir, este mismo sitio, fue creado con Next.js y maquetado con la librería ChakraUI. Se trata de una primera versión, con funciones base y se planea agregar mejoras en una futura segunda versión. El maquetador se realizó con ChakraUI."
+  }
+]

@@ -1,8 +1,16 @@
 import React from 'react'
 import { Button } from '@chakra-ui/react'
 import { DownloadIcon } from '@chakra-ui/icons'
+import resumePDF from '../../public/assets/pdf/Alan Marcelo Flores - CV.pdf'
 
 const DownloadResumeButton = () => {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = resumePDF;
+    link.download = 'Alan Marcelo Flores - CV';
+    link.click()
+  }
+
   return (
     <Button 
         rightIcon={<DownloadIcon />} 
@@ -12,6 +20,7 @@ const DownloadResumeButton = () => {
             color: "mainColor",
           }} 
         background="transparent" variant='solid'
+        onClick={handleDownloadResume}
     >
         Descargar CV
     </Button>

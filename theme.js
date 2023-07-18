@@ -6,8 +6,9 @@ const theme = extendTheme({
   },
   styles: {
     global: {
-      body: {
+      "html, body": {
         bg: "gray.900",
+        scrollBehavior: "smooth"
       },
     },
   },

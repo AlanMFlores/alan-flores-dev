@@ -1,11 +1,14 @@
 import React from 'react'
-import { Button } from '@chakra-ui/react'
+import { Flex, Text, Image, Link } from '@chakra-ui/react'
 
-const ContactButton = () => {
+const ContactButton = ({icon, cta, href}) => {
   return (
-    <Button bg="mainColor" color="gray.900" fontSize="lg" fontWeight="semibold" px="32px" py="8px" rounded="0">
-        Contacto
-    </Button>
+    <Link target='blank' href={href}>
+        <Flex alignItems="center" gap="16px">
+            <Image src={`../../assets/icons/${icon}.svg`}/>
+            <Text color="gray.50" fontSize="md" fontWeight="semibold">{cta}</Text>
+        </Flex>
+    </Link>
   )
 }
 

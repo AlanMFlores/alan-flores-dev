@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Link } from '@chakra-ui/react';
+import NextLink from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Flex } from '@chakra-ui/react';
@@ -8,31 +9,30 @@ import { Flex } from '@chakra-ui/react';
 const Header = () => {
   return (
     <Flex justifyContent="space-between" alignItems="center" px="128px" py="48px" bg="gray.900">
-        <figure>
+        <NextLink href={"/"}>
             <Image 
                 src={"/assets/icons/logo.svg"}
                 width={64}
                 height={66}
                 alt='alan flores dev logo'
             />
-        </figure>
+        </NextLink>
         <Flex gap="32px">
-            <Link color="gray.50" fontWeight="semibold" href={"#about-me"}>
+            <Link color="gray.50" fontWeight="semibold" href={"#about-me"} _hover={{color:"mainColor"}}>
                 Sobre Mí
             </Link>
-            <Link color="gray.50" fontWeight="semibold" href={"#projects"}>
+            <Link color="gray.50" fontWeight="semibold" href={"#projects"} _hover={{color:"mainColor"}}>
                 Proyectos
             </Link>
-            <Link color="gray.50" fontWeight="semibold" href={"#contact"}>
+            <Link color="gray.50" fontWeight="semibold" href={"#contact"} _hover={{color:"mainColor"}}>
                 Contacto
             </Link>
         </Flex>
-
         <Flex gap="16px">
-            <Link color="gray.400" fontSize="xl">
+            <Link href="https://github.com/AlanMFlores" target='blank' color="gray.400" fontSize="xl" _hover={{color: "mainColor"}}>
                 <FontAwesomeIcon icon={faGithub}/>
             </Link>
-            <Link color="gray.400" fontSize="xl">
+            <Link href="https://www.linkedin.com/in/alanmflores/" target='blank' color="gray.400" fontSize="xl" _hover={{color: "mainColor"}}>
                 <FontAwesomeIcon icon={faLinkedin}/>
             </Link>
         </Flex>
