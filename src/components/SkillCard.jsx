@@ -4,7 +4,7 @@ import { Image } from '@chakra-ui/react'
 
 const SkillCard = ({iconName, skill}) => {
   return (
-    <Flex gap="16px" alignItems="center" maxW="284px" p="32px" bg="gray.800" shadow="lg">
+    <Flex gap="16px" alignItems="center" w="100%" maxW={{base:"512px", lg:"284px"}} p="32px" bg="gray.800" shadow="lg">
         <Box color="mainColor">
             <Image src={`../../assets/icons/${iconName}.svg`} alt={`${skill} icon`}/>
         </Box>

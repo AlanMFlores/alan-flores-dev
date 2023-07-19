@@ -8,7 +8,7 @@ import { Flex } from '@chakra-ui/react';
 
 const Header = () => {
   return (
-    <Flex justifyContent="space-between" alignItems="center" px="128px" py="48px" bg="gray.900">
+    <Flex justifyContent={{base: "center", lg:"space-between"}} alignItems="center" px={"128px"} py="48px" bg="gray.900">
         <NextLink href={"/"}>
             <Image 
                 src={"/assets/icons/logo.svg"}
@@ -17,7 +17,7 @@ const Header = () => {
                 alt='alan flores dev logo'
             />
         </NextLink>
-        <Flex gap="32px">
+        <Flex gap="32px" display={{base: "none", lg:"flex"}}>
             <Link color="gray.50" fontWeight="semibold" href={"#about-me"} _hover={{color:"mainColor"}}>
                 Sobre Mí
             </Link>
@@ -28,7 +28,7 @@ const Header = () => {
                 Contacto
             </Link>
         </Flex>
-        <Flex gap="16px">
+        <Flex gap="16px" display={{base: "none", lg:"flex"}}>
             <Link href="https://github.com/AlanMFlores" target='blank' color="gray.400" fontSize="xl" _hover={{color: "mainColor"}}>
                 <FontAwesomeIcon icon={faGithub}/>
             </Link>

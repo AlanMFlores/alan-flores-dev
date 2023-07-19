@@ -17,12 +17,12 @@ const ProjectCard = ({slug, title, tags, description, content, repository, deplo
     }
 
   return (
-    <Flex gap="24px" px="16px" py="32px" shadow="lg" alignItems="center">
+    <Flex gap="24px" p={{base:"24px", lg:"32px"}} shadow="lg" alignItems="center" flexDirection={{base:"column", xl:"row"}} bg="gray.800" position={{base:"relative", xl:"static"}} h={{base: "528px", xl:"auto"}}>
         <Box maxW="384px">
             <Image src={`../../assets/images/${slug}.jpg`} alt="project image"/>
         </Box>
-        <Flex direction="column">
-            <Flex gap="16px">
+        <Flex direction="column" >
+            <Flex gap="16px" flexWrap={{base: "wrap", xl:"nowrap"}}>
                 {tags.map((tag) => (
                 <Tag key={tag} tag={tag} />
                 ))}
@@ -30,10 +30,10 @@ const ProjectCard = ({slug, title, tags, description, content, repository, deplo
             <Heading as="h4" fontSize="2xl" color="gray.50" py="16px">
                 {title}
             </Heading>
-            <Text color="gray.50" mb="32px" noOfLines={2}>
+            <Text color="gray.50" mb="32px" noOfLines={{base:4, lg:2}}>
                 {description}
             </Text>
-            <Button onClick={handleOpenModal} bg="transparent" _hover={{bg:"none"}} maxW="fit-content" p="0">
+            <Button onClick={handleOpenModal} bg="transparent" _hover={{bg:"none"}} maxW={{base:"none", xl:"fit-content"}} p="0" position={{base: "absolute", xl:"static"}} bottom="24px" left="24px" right="24px">
                 <ActionButton action={"Ver más detalles"}/>
             </Button>
         </Flex>

@@ -3,19 +3,19 @@ import { Flex, Grid, Heading, Text, Box, Link, GridItem } from '@chakra-ui/react
 
 const Education = () => {
   return (
-    <Flex py="40px" px="128px" direction="column">
-        <Heading as="h3" color="gray.50">
+    <Flex py={{base:"24px", lg:"40px"}} px={{base:"32px", lg:"112px",'2xl':"128px"}} mb="40px" direction="column">
+        <Heading as="h3" color="gray.50" textAlign={{base:"center", lg:"left"}}>
             <Text as="span" py="16px" mb="32px" fontSize="4xl" display="inline-block" borderBottom="4px" borderColor="mainColor">
                 Formación 
             </Text>
-            <Grid gap="24px" templateColumns={"repeat(2, 1fr)"} templateRows={"repeat(3, 1fr)"} placeContent="center">
+            <Grid gap="24px" templateColumns={"repeat(2, 1fr)"} templateRows={"repeat(3, 1fr)"} placeContent="center" display={{base:"flex", lg:"grid"}} flexDirection="column" maxW={{base:"fit-content", lg:"none"}} m={{base:"auto", lg:"unset"}}>
                 <GridItem order={"1"}>
                     <Flex alignItems="center" gap="16px">
                         <Text color="mainColor">•</Text>
                         <Text color="gray.400" fontSize="xl" fontWeight="semibold">2020</Text>
                         <Text color="gray.400" fontSize="xl" fontWeight="semibold">-</Text>
                         <Flex direction="column" gap="8px">
-                            <Text color="gray.50" fontSize="2xl">Diseño de Interfaces</Text>
+                            <Text color="gray.50" fontSize="2xl" textAlign="left">Diseño de Interfaces</Text>
                             <Flex gap="16px">
                                 <Text color="gray.50" fontSize="lg" fontWeight="normal">Platzi</Text>
                                 <Text color="blue.600" fontSize="lg" fontWeight="normal">Completado</Text>
@@ -29,7 +29,7 @@ const Education = () => {
                         <Text color="gray.400" fontSize="xl" fontWeight="semibold">2022</Text>
                         <Text color="gray.400" fontSize="xl" fontWeight="semibold">-</Text>
                         <Flex direction="column" gap="8px">
-                            <Text color="gray.50" fontSize="2xl">Desarrollo Frontend en React</Text>
+                            <Text color="gray.50" fontSize="2xl" textAlign="left">Desarrollo Frontend en React</Text>
                             <Flex gap="16px">
                                 <Text color="gray.50" fontSize="lg" fontWeight="normal">CoderHouse</Text>
                                 <Text color="blue.600" fontSize="lg" fontWeight="normal">Completado</Text>
@@ -43,7 +43,7 @@ const Education = () => {
                             <Text color="gray.400" fontSize="xl" fontWeight="semibold">2020</Text>
                             <Text color="gray.400" fontSize="xl" fontWeight="semibold">-</Text>
                             <Flex direction="column" gap="8px">
-                                <Text color="gray.50" fontSize="2xl">Desarrollo Backend con Node.js</Text>
+                                <Text color="gray.50" fontSize="2xl" textAlign="left">Desarrollo Backend con Node.js</Text>
                                 <Flex gap="16px">
                                     <Text color="gray.50" fontSize="lg" fontWeight="normal">Platzi</Text>
                                     <Text color="gray.400" fontSize="lg" fontWeight="normal">En progreso</Text>

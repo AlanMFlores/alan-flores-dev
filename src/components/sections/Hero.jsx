@@ -12,10 +12,10 @@ const Hero = () => {
           </Box>
         </Box>
         <Flex direction="column" alignItems="center" position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
-          <Heading as="h1" color="gray.50" fontSize="6xl" mb="24px">
-            ¡Hola! Soy <Text as="span" color="mainColor">Alan Flores</Text>
+          <Heading as="h1" color="gray.50" fontSize={{base:"4xl", lg:"5xl", xl:"6xl"}} textAlign={{base:"center", lg:"left"}} mb="24px">
+            ¡Hola! Soy <Text as="span" color="mainColor" display={{base:"block", lg:"inline"}}>Alan Flores</Text>
           </Heading>
-          <Heading as="h2" color="gray.400" fontSize="4xl" mb="64px">
+          <Heading as="h2" color="gray.400" fontSize={{base:"2xl", lg:"3xl", xl:"4xl"}} mb="64px">
             Desarrollador Frontend
           </Heading>
           <Flex>

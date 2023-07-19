@@ -5,13 +5,13 @@ import { Image } from '@chakra-ui/react'
 
 const AboutMe = () => {
   return (
-    <Flex py="40px" px="128px" direction="column" id="about-me">
-        <Heading as="h3" color="gray.50">
+    <Flex py={{base:"24px", lg:"40px"}} px={{base:"32px", lg:"112px",'2xl':"128px"}} direction="column" id="about-me">
+        <Heading as="h3" color="gray.50" textAlign={{base:"center", lg:"left"}}>
             <Text as="span" py="16px" mb="32px" display="inline-block" borderBottom="4px" borderColor="mainColor">
                 Sobre Mí
             </Text>
         </Heading>
-        <Flex gap="48px" alignItems="center">
+        <Flex gap="48px" alignItems="center" flexDirection={{base: 'column-reverse', lg:"row-reverse"}}>
             <Box>
                 <Text color="gray.50" mb="24px">
                     Soy Alan Flores, <Text as="span" color="mainColor" fontWeight="semibold">Desarrollador Web</Text> especializado en el <Text as="span" color="mainColor" fontWeight="semibold">Frontend</Text> con un sólido criterio de <Text as="span" color="mainColor" fontWeight="semibold">diseño</Text>, que busca seguir avanzando en el camino adquiriendo conocimientos de Backend.
@@ -24,7 +24,7 @@ const AboutMe = () => {
                 </Text>
             </Box>
             <Box>
-                <Image src="/assets/images/profile-photo.png" alt="profile-photo" height="100%"/>
+                <Image src="/assets/images/profile-photo.png" alt="profile-photo" height="100%" maxW={{base: "224px", lg:"256px"}}/>
             </Box>
         </Flex>
     </Flex>
