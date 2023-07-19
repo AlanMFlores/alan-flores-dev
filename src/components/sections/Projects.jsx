@@ -19,6 +19,9 @@ const Projects = () => {
               title={project.title}
               tags={project.tags}
               description={project.description}
+              content={project.content}
+              repository={project.repository}
+              deploy={project.deploy}
             />
           ))}
         </Flex>

@@ -1,10 +1,21 @@
-import React from 'react'
-import { Flex, Heading, Box, Text, Image } from '@chakra-ui/react'
+import {React, useState} from 'react'
+import { Flex, Heading, Box, Text, Image, Button } from '@chakra-ui/react'
 import Link from 'next/link'
 import ActionButton from './ActionButton'
 import Tag from './Tag'
+import ProjectDetailsModal from './ProjectDetailsModal'
 
-const ProjectCard = ({slug, title, tags, description}) => {
+const ProjectCard = ({slug, title, tags, description, content, repository, deploy}) => {
+    const [isOpenModal, setIsOpenModal] = useState(false)
+
+    const handleOpenModal = () => {
+        setIsOpenModal(true)
+    }
+
+    const handleCloseModal = () => {
+        setIsOpenModal(false)
+    }
+
   return (
     <Flex gap="24px" px="16px" py="32px" shadow="lg" alignItems="center">
         <Box maxW="384px">
@@ -22,10 +33,25 @@ const ProjectCard = ({slug, title, tags, description}) => {
             <Text color="gray.50" mb="32px" noOfLines={2}>
                 {description}
             </Text>
-            <Link href={`/projects/${slug}`}>
+            <Button onClick={handleOpenModal} bg="transparent" _hover={{bg:"none"}} maxW="fit-content" p="0">
                 <ActionButton action={"Ver más detalles"}/>
-            </Link>
+            </Button>
         </Flex>
+
+        {
+            isOpenModal && (
+                <ProjectDetailsModal
+                    slug={slug}
+                    title={title}
+                    tags={tags}
+                    description={description}
+                    content={content}
+                    repository={repository}
+                    deploy={deploy}
+                    onClose={handleCloseModal}
+                />
+            )
+        }
     </Flex>
   )
 }
