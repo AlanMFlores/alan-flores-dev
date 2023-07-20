@@ -13,7 +13,7 @@ const ProjectDetailsModal = ({slug, title, tags, description, onClose, content, 
             <ModalHeader color="gray.50">{title}</ModalHeader>
             <ModalCloseButton color="gray.50"/>
             <ModalBody>
-                <Flex gap="16px" mb="24px">
+                <Flex gap="16px" mb="24px" flexWrap="wrap">
                     {tags.map((tag) => (
                     <Tag key={tag} tag={tag} />
                     ))}
@@ -32,10 +32,10 @@ const ProjectDetailsModal = ({slug, title, tags, description, onClose, content, 
                     }
                 </Text>
                 <Flex gap="16px" justifyContent="center" mb="32px">
-                    <Link href={repository} color="gray.900" fontWeight="bold" bg="mainColor" px="16px" py="8px" target='blank'>
+                    <Link href={repository} color="gray.900" fontWeight="bold" bg="mainColor" px="16px" py="8px" target='blank' textAlign="center">
                         Ver Repositorio en Github
                     </Link>
-                    <Link href={deploy} color="gray.900" fontWeight="bold" bg="mainColor" px="16px" py="8px" target='blank'>
+                    <Link href={deploy} color="gray.900" fontWeight="bold" bg="mainColor" px="16px" py="8px" target='blank' textAlign="center">
                         Ver Deploy
                     </Link>
                 </Flex>
