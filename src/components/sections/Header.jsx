@@ -5,18 +5,22 @@ import NextLink from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Flex } from '@chakra-ui/react';
+import MobileMenu from '../MobileMenu';
 
 const Header = () => {
   return (
     <Flex justifyContent={{base: "center", lg:"space-between"}} alignItems="center" px={"128px"} py="48px" bg="gray.900">
-        <NextLink href={"/"}>
-            <Image 
-                src={"/assets/icons/logo.svg"}
-                width={64}
-                height={66}
-                alt='alan flores dev logo'
-            />
-        </NextLink>
+        <Flex flexDirection="column" gap="24px" alignItems="center">
+            <NextLink href={"/"}>
+                <Image 
+                    src={"/assets/icons/logo.svg"}
+                    width={64}
+                    height={66}
+                    alt='alan flores dev logo'
+                />
+            </NextLink>
+            <MobileMenu/>
+        </Flex>
         <Flex gap="32px" display={{base: "none", lg:"flex"}}>
             <Link color="gray.50" fontWeight="semibold" href={"#about-me"} _hover={{color:"mainColor"}}>
                 Sobre Mí
