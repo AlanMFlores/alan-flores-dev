@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '@chakra-ui/react'
 import { DownloadIcon } from '@chakra-ui/icons'
-import resumePDF from '../../public/assets/pdf/Alan Marcelo Flores - CV.pdf'
+import resumePDF from '../../public/assets/pdf/Currículum Vitae - Alan M. Flores.pdf'
 
 const DownloadResumeButton = () => {
   const handleDownloadResume = () => {
