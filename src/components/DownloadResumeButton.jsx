@@ -7,7 +7,7 @@ const DownloadResumeButton = () => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
     link.href = resumePDF;
-    link.download = 'Alan Marcelo Flores - CV';
+    link.download = 'Currículum Vitae - Alan M. Flores';
     link.click()
   }
 
